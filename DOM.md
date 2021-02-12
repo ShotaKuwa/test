@@ -44,4 +44,24 @@ h1.innerHTML = "書き換えた<span style ='color:red'>かもね＜/span>"
 ul.style.color = 'green'  
 →'green'  
 - 複数要素を取得した場合  
-querySelectorAll
+querySelectorAll ver  
+- 添字指定  
+ex) const li = document.querySelectorALL('li')  
+li[1].style.textDecoration = 'underline'  
+上記の様にtext-decorationの指定でプロパティ名がそのまま使えないことがあるので注意  
+- ループ文  
+ex) li[1].style.textDecoration = 'underline'  
+↓  
+li.forEach(node => node.style.color = 'purple')  
+- ノードに対するクラス情報を取得、操作  
+classList  
+classListにアクセスし、その要素のクラス情報を取得、addメソッドでクラス追加も可能  
+const h1 = document.puerySelector('#title')  
+h1.classList.add('text-size')  
+  
+removeメソッドでクラスの除去やtoggleメソッドでそれが呼ばれるたびにクラスの追加や除去が可能になる  
+***  
+---  
+___  
+## ***結論*** querySelectorAllから*むずい*  
+[参照](https://qiita.com/fumu238/items/6a6fe367988dc8c75d86) [参照2](https://qiita.com/hththt/items/cc047e326994f440a17a)
